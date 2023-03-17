@@ -1,0 +1,163 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.29.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: aaaa heshao, vvvvv, LIC=AK1BF-6JRJX-INEA7-EPJC2-H0EQC-QYNJ7
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.29.0.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.29.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.36.5.0
+ 
+<h2>Project:</h2>
+d:\项目\UWB项目\pro_alltest\USER\test.uvprojx
+Project File Date:  05/13/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling stm32f4xx_dbgmcu.c...
+compiling stm32f4xx_gpio.c...
+compiling stm32f4xx_adc.c...
+compiling misc.c...
+compiling stm32f4xx_dma.c...
+compiling stm32f4xx_exti.c...
+compiling stm32f4xx_flash.c...
+compiling stm32f4xx_usart.c...
+compiling stm32f4xx_syscfg.c...
+compiling stm32f4xx_spi.c...
+compiling stm32f4xx_pwr.c...
+compiling stm32f4xx_rcc.c...
+assembling startup_stm32f401xx.s...
+compiling sys.c...
+compiling stm32f4xx_rtc.c...
+compiling stm32f4xx_tim.c...
+compiling system_stm32f4xx.c...
+compiling delay.c...
+compiling stm32f4xx_it.c...
+compiling oled.c...
+compiling main.c...
+..\APP\mq.h(13): warning:  #1295-D: Deprecated declaration MQ_get_ad_value - give arg types
+  void MQ_get_ad_value();
+main.c: 1 warning, 0 errors
+compiling dwm1000_timestamp.c...
+compiling location.c...
+..\APP\location.c(500): warning:  #550-D: variable "solution_compare2"  was set but never used
+  	vec3d	solution_compare1, solution_compare2;
+..\APP\location.c: 1 warning, 0 errors
+compiling dw1000.c...
+compiling ds18b20.c...
+compiling MQ.c...
+..\APP\MQ.h(13): warning:  #1295-D: Deprecated declaration MQ_get_ad_value - give arg types
+  void MQ_get_ad_value();
+..\APP\MQ.c: 1 warning, 0 errors
+compiling rtc_time.c...
+compiling timer.c...
+compiling rx_main.c...
+compiling adxl345.c...
+..\APP\adxl345.c(331): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      return res*180.0/PI;
+..\APP\adxl345.c: 1 warning, 0 errors
+compiling tx_main.c...
+..\APP\mq.h(13): warning:  #1295-D: Deprecated declaration MQ_get_ad_value - give arg types
+  void MQ_get_ad_value();
+..\APP\tx_main.c: 1 warning, 0 errors
+compiling filter.c...
+compiling buzzer.c...
+compiling kalman.c...
+..\kalman\kalman.c(130): warning:  #223-D: function "MatrixMul" declared implicitly
+      MatrixMul(A, tOpt.XPreOpt, X, A_ROW, X_ROW, X_COLUMN);       //  基于系统的上一状态而预测现在状态; X(k|k-1) = A(k,k-1)*X(k-1|k-1)
+..\kalman\kalman.c(132): warning:  #223-D: function "MatrixCal1" declared implicitly
+      MatrixCal1(A, tCov.PPreOpt, Temp4, SYS_ORDER);
+..\kalman\kalman.c(133): warning:  #223-D: function "MatrixAdd" declared implicitly
+      MatrixAdd(Temp4, Q, P, P_ROW, P_COLUMN);                     //  预测数据的协方差矩阵; P(k|k-1) = A(k,k-1)*P(k-1|k-1)*A(k,k-1)'+Q
+..\kalman\kalman.c(135): warning:  #223-D: function "MatrixCal2" declared implicitly
+      MatrixCal2(C, P, Temp1, C_ROW, C_COLUMN);
+..\kalman\kalman.c(137): warning:  #223-D: function "Gauss_Jordan" declared implicitly
+      Gauss_Jordan(Temp1, C_ROW);
+..\kalman\kalman.c(138): warning:  #223-D: function "MatrixTrans" declared implicitly
+      MatrixTrans(C, Temp2, C_ROW, C_COLUMN);
+..\kalman\kalman.c(143): warning:  #223-D: function "MatrixMinus" declared implicitly
+      MatrixMinus(Y, Temp1, Temp1, Y_ROW, Y_COLUMN);
+..\kalman\kalman.c(161): warning:  #1-D: last line of file ends without a newline
+  }
+..\kalman\kalman.c(127): warning:  #177-D: variable "j"  was declared but never referenced
+  	unsigned char   i,j;
+..\kalman\kalman.c: 9 warnings, 0 errors
+compiling matrix.c...
+..\kalman\matrix.c(277): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+          if (d+1.0==1.0)
+..\kalman\matrix.c(292): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+          a[l]=1.0/a[l];
+..\kalman\matrix.c: 2 warnings, 0 errors
+compiling FallDetection.c...
+..\APP\FallDetection.c(91): warning:  #223-D: function "printf" declared implicitly
+  				printf("0-start!\n");
+..\APP\FallDetection.c(370): warning:  #223-D: function "printf" declared implicitly
+  					printf("运动\n");
+..\APP\FallDetection.c: 2 warnings, 0 errors
+compiling deca_range_tables.c...
+..\platform\deca_range_tables.c(647): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      int rangeint25cm = (int) (range * 4.00) ;       // convert range to integer number of 25cm values.
+..\platform\deca_range_tables.c: 1 warning, 0 errors
+compiling algorithm.c...
+compiling max_iic.c...
+compiling iic.c...
+compiling max30102.c...
+..\APP\max30102.c(519): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  			OLED_ShowString(80,0,data1,12);
+..\APP\max30102.c(527): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  			OLED_ShowString(80,2,data2,12);
+..\APP\max30102.c: 2 warnings, 0 errors
+compiling deca_params_init.c...
+compiling deca_mutex.c...
+compiling port.c...
+..\decadriver\deca_device_api.h(1942): error:  #147-D: declaration is incompatible with "int writetospi_serial(uint16_t, const uint8_t *, uint32_t, const uint8_t *)"  (declared at line 46 of "..\platform\port.h")
+  int writetospi(uint16 headerLength, const uint8 *headerBuffer, uint32 bodylength, const uint8 *bodyBuffer);
+..\decadriver\deca_device_api.h(1966): error:  #147-D: declaration is incompatible with "int readfromspi_serial(uint16_t, const uint8_t *, uint32_t, uint8_t *)"  (declared at line 51 of "..\platform\port.h")
+  int readfromspi(uint16 headerLength, const uint8 *headerBuffer, uint32 readlength, uint8 *readBuffer);
+..\platform\port.c(177): warning:  #550-D: variable "p1"  was set but never used
+  	u32 p1,p2,hclk,sysclk;
+..\platform\port.c(177): warning:  #550-D: variable "p2"  was set but never used
+  	u32 p1,p2,hclk,sysclk;
+..\platform\port.c(177): warning:  #550-D: variable "hclk"  was set but never used
+  	u32 p1,p2,hclk,sysclk;
+..\platform\port.c(177): warning:  #550-D: variable "sysclk"  was set but never used
+  	u32 p1,p2,hclk,sysclk;
+..\platform\port.c: 4 warnings, 2 errors
+compiling deca_sleep.c...
+compiling deca_spi.c...
+compiling deca_device.c...
+..\decadriver\deca_device.c(1661): warning:  #68-D: integer conversion resulted in a change of sign
+          return DWT_ERROR;
+..\decadriver\deca_device.c: 1 warning, 0 errors
+".\Objects\test.axf" - 2 Error(s), 26 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.16.0.pack
+                Keil.STM32F4xx_DFP.2.16.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  D:\keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:10
+</pre>
+</body>
+</html>

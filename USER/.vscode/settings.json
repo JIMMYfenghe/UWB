@@ -1,0 +1,33 @@
+{
+    "files.autoGuessEncoding": true,
+    "files.associations": {
+        "usart1.h": "c",
+        "stdio.h": "c",
+        "dw1000.h": "c",
+        "cstdio": "c",
+        "dwm1000_timestamp.h": "c",
+        "port.h": "c",
+        "limits": "c",
+        "deca_device_api.h": "c",
+        "sleep.h": "c",
+        "deca_spi.h": "c",
+        "*.tcc": "c",
+        "stm32f4xx_rcc.h": "c",
+        "stm32f4xx_spi.h": "c",
+        "types.h": "c",
+        "stm32f4xx_tim.h": "c",
+        "oledfont.h": "c",
+        "oled.h": "c",
+        "time.h": "c",
+        "iic.h": "c",
+        "sys.h": "c",
+        "stm32f4xx.h": "c",
+        "adxl345.h": "c",
+        "falldetection.h": "c",
+        "mq.h": "c",
+        "delay.h": "c",
+        "buzzer.h": "c",
+        "timer.h": "c",
+        "max30102.h": "c"
+    }
+}
