@@ -9,47 +9,54 @@
 3、编译QT源码
   需注意第二步骤环境设置
   编写配置脚本：autoconfig.sh
-  ./configure \
--opengl es2 \
--device linux-imx6-g++ \
--device-option CROSS_COMPILE=/home/heshao/sdk/fsl-imx-fb/4.14-sumo/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi- \          //
--sysroot /home/heshao/sdk/fsl-imx-fb/4.14-sumo/sysroots/cortexa9hf-neon-poky-linux-gnueabi \
--opensource \
--confirm-license \
--optimized-qmake \
--release \
--skip qt3d \
--skip qtandroidextras \
--skip qtcanvas3d \
--skip qtconnectivity \
--skip qtdatavis3d \
--skip qtdoc \
--skip qtgamepad \
--skip qtlocation \
--skip qtmacextras \
--skip qtnetworkauth \
--skip qtpurchasing \
--skip qtremoteobjects \
--skip qtscript \
--skip qtscxml \
--skip qtsensors \
--skip qtspeech \
--skip qttools \
--skip qttranslations \
--skip qtwayland \
--skip qtwebengine \
--skip qtwebview \
--skip qtwinextras \
--skip qtx11extras \
--skip qtxmlpatterns \
--make libs \
--extprefix /home/heshao/mylinux/IMX6ULL/third-lib/arm-qt5.12.9-gl \
--no-pch \
--no-iconv \
--no-glib \
--no-icu \
--make examples \
--nomake tests \
--no-xcb \
--eglfs \
--tslib \
+      ./configure \
+    -opengl es2 \
+    -device linux-imx6-g++ \
+    -device-option CROSS_COMPILE=/home/heshao/sdk/fsl-imx-fb/4.14-sumo/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi- \          //设置编译器路径，即你安装路径的子目录下，如/userdir/sysroots/x86......
+    -sysroot /home/heshao/sdk/fsl-imx-fb/4.14-sumo/sysroots/cortexa9hf-neon-poky-linux-gnueabi \                                                                        //设置根文件路径，即你安装路径的子目录下，如/userdir/sysroots/corte...
+    -opensource \
+    -confirm-license \
+    -optimized-qmake \
+    -release \
+    -skip qt3d \
+    -skip qtandroidextras \
+    -skip qtcanvas3d \
+    -skip qtconnectivity \
+    -skip qtdatavis3d \
+    -skip qtdoc \
+    -skip qtgamepad \
+    -skip qtlocation \
+    -skip qtmacextras \
+    -skip qtnetworkauth \
+    -skip qtpurchasing \
+    -skip qtremoteobjects \
+    -skip qtscript \
+    -skip qtscxml \
+    -skip qtsensors \
+    -skip qtspeech \
+    -skip qttools \
+    -skip qttranslations \
+    -skip qtwayland \
+    -skip qtwebengine \
+    -skip qtwebview \
+    -skip qtwinextras \
+    -skip qtx11extras \
+    -skip qtxmlpatterns \
+    -make libs \
+    -extprefix /home/heshao/mylinux/IMX6ULL/third-lib/arm-qt5.12.9-gl \                                                                                          //你实际安装QT库的路径
+    -no-pch \
+    -no-iconv \
+    -no-glib \
+    -no-icu \
+    -make examples \
+    -nomake tests \
+    -no-xcb \
+    -eglfs \
+    -tslib \
+    
+    配置无误后，编译并安装！
+    make -j8
+    make install
+4、编译QT程序
+  可通过命令行编译，执行QT库路径下的bin目录下的qmake ：qmake yourproject.pro
+  可通过qt creator编译，需在当前环境变量设置完毕终端下执行qt软件，/.../.../creator,随后配置kit,qmake等。参考：https://blog.csdn.net/bhniunan/article/details/104307522
