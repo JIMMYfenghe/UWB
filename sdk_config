@@ -1,0 +1,55 @@
+1、安装SDK
+  进入sdk目录，执行以下命令安装。
+  cmd: ./fsl-imx-fb-glibc-x86_64-fsl-image-validation-imx-cortexa9hf-neon-toolchain-4.14-sumo.sh
+  选择安装目录，建议安装在用户目录，权限比较好。
+2、环境变量设置
+  每次使用该SDK，都必须在当前终端执行以下命令，关闭终端或更换终端失效！
+  进入你本人安装的目录后
+  cmd: . environment-setup-cortexa9hf-neon-poky-linux-gnueabi
+3、编译QT源码
+  需注意第二步骤环境设置
+  编写配置脚本：autoconfig.sh
+  ./configure \
+-opengl es2 \
+-device linux-imx6-g++ \
+-device-option CROSS_COMPILE=/home/heshao/sdk/fsl-imx-fb/4.14-sumo/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi- \          //
+-sysroot /home/heshao/sdk/fsl-imx-fb/4.14-sumo/sysroots/cortexa9hf-neon-poky-linux-gnueabi \
+-opensource \
+-confirm-license \
+-optimized-qmake \
+-release \
+-skip qt3d \
+-skip qtandroidextras \
+-skip qtcanvas3d \
+-skip qtconnectivity \
+-skip qtdatavis3d \
+-skip qtdoc \
+-skip qtgamepad \
+-skip qtlocation \
+-skip qtmacextras \
+-skip qtnetworkauth \
+-skip qtpurchasing \
+-skip qtremoteobjects \
+-skip qtscript \
+-skip qtscxml \
+-skip qtsensors \
+-skip qtspeech \
+-skip qttools \
+-skip qttranslations \
+-skip qtwayland \
+-skip qtwebengine \
+-skip qtwebview \
+-skip qtwinextras \
+-skip qtx11extras \
+-skip qtxmlpatterns \
+-make libs \
+-extprefix /home/heshao/mylinux/IMX6ULL/third-lib/arm-qt5.12.9-gl \
+-no-pch \
+-no-iconv \
+-no-glib \
+-no-icu \
+-make examples \
+-nomake tests \
+-no-xcb \
+-eglfs \
+-tslib \
